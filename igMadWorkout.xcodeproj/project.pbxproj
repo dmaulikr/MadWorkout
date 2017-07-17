@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B296F8711F1D0407005411AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B296F8701F1D0407005411AD /* AppDelegate.swift */; };
+		B296F8731F1D0407005411AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B296F8721F1D0407005411AD /* ViewController.swift */; };
+		B296F8761F1D0407005411AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B296F8741F1D0407005411AD /* Main.storyboard */; };
+		B296F8781F1D0407005411AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B296F8771F1D0407005411AD /* Assets.xcassets */; };
+		B296F87B1F1D0407005411AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B296F8791F1D0407005411AD /* LaunchScreen.storyboard */; };
+		B296F8801F1D0407005411AD /* igMadWorkout WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B296F87F1F1D0407005411AD /* igMadWorkout WatchKit App.app */; };
+		B296F8861F1D0407005411AD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B296F8841F1D0407005411AD /* Interface.storyboard */; };
+		B296F8881F1D0407005411AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B296F8871F1D0407005411AD /* Assets.xcassets */; };
+		B296F88F1F1D0407005411AD /* igMadWorkout WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B296F88E1F1D0407005411AD /* igMadWorkout WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B296F8941F1D0407005411AD /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B296F8931F1D0407005411AD /* InterfaceController.swift */; };
+		B296F8961F1D0407005411AD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B296F8951F1D0407005411AD /* ExtensionDelegate.swift */; };
+		B296F8981F1D0407005411AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B296F8971F1D0407005411AD /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B296F8811F1D0407005411AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B296F8651F1D0407005411AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B296F87E1F1D0407005411AD;
+			remoteInfo = "igMadWorkout WatchKit App";
+		};
+		B296F8901F1D0407005411AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B296F8651F1D0407005411AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B296F88D1F1D0407005411AD;
+			remoteInfo = "igMadWorkout WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B296F89F1F1D0407005411AD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B296F88F1F1D0407005411AD /* igMadWorkout WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B296F8A31F1D0407005411AD /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B296F8801F1D0407005411AD /* igMadWorkout WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B296F86D1F1D0407005411AD /* igMadWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = igMadWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B296F8701F1D0407005411AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B296F8721F1D0407005411AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B296F8751F1D0407005411AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B296F8771F1D0407005411AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B296F87A1F1D0407005411AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B296F87C1F1D0407005411AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B296F87F1F1D0407005411AD /* igMadWorkout WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "igMadWorkout WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B296F8851F1D0407005411AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		B296F8871F1D0407005411AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B296F8891F1D0407005411AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B296F88E1F1D0407005411AD /* igMadWorkout WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "igMadWorkout WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B296F8931F1D0407005411AD /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		B296F8951F1D0407005411AD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		B296F8971F1D0407005411AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B296F8991F1D0407005411AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B296F86A1F1D0407005411AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B296F88B1F1D0407005411AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B296F8641F1D0407005411AD = {
+			isa = PBXGroup;
+			children = (
+				B296F86F1F1D0407005411AD /* igMadWorkout */,
+				B296F8831F1D0407005411AD /* igMadWorkout WatchKit App */,
+				B296F8921F1D0407005411AD /* igMadWorkout WatchKit Extension */,
+				B296F86E1F1D0407005411AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B296F86E1F1D0407005411AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B296F86D1F1D0407005411AD /* igMadWorkout.app */,
+				B296F87F1F1D0407005411AD /* igMadWorkout WatchKit App.app */,
+				B296F88E1F1D0407005411AD /* igMadWorkout WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B296F86F1F1D0407005411AD /* igMadWorkout */ = {
+			isa = PBXGroup;
+			children = (
+				B296F8701F1D0407005411AD /* AppDelegate.swift */,
+				B296F8721F1D0407005411AD /* ViewController.swift */,
+				B296F8741F1D0407005411AD /* Main.storyboard */,
+				B296F8771F1D0407005411AD /* Assets.xcassets */,
+				B296F8791F1D0407005411AD /* LaunchScreen.storyboard */,
+				B296F87C1F1D0407005411AD /* Info.plist */,
+			);
+			path = igMadWorkout;
+			sourceTree = "<group>";
+		};
+		B296F8831F1D0407005411AD /* igMadWorkout WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				B296F8841F1D0407005411AD /* Interface.storyboard */,
+				B296F8871F1D0407005411AD /* Assets.xcassets */,
+				B296F8891F1D0407005411AD /* Info.plist */,
+			);
+			path = "igMadWorkout WatchKit App";
+			sourceTree = "<group>";
+		};
+		B296F8921F1D0407005411AD /* igMadWorkout WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B296F8931F1D0407005411AD /* InterfaceController.swift */,
+				B296F8951F1D0407005411AD /* ExtensionDelegate.swift */,
+				B296F8971F1D0407005411AD /* Assets.xcassets */,
+				B296F8991F1D0407005411AD /* Info.plist */,
+			);
+			path = "igMadWorkout WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B296F86C1F1D0407005411AD /* igMadWorkout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B296F8A41F1D0407005411AD /* Build configuration list for PBXNativeTarget "igMadWorkout" */;
+			buildPhases = (
+				B296F8691F1D0407005411AD /* Sources */,
+				B296F86A1F1D0407005411AD /* Frameworks */,
+				B296F86B1F1D0407005411AD /* Resources */,
+				B296F8A31F1D0407005411AD /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B296F8821F1D0407005411AD /* PBXTargetDependency */,
+			);
+			name = igMadWorkout;
+			productName = igMadWorkout;
+			productReference = B296F86D1F1D0407005411AD /* igMadWorkout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B296F87E1F1D0407005411AD /* igMadWorkout WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B296F8A01F1D0407005411AD /* Build configuration list for PBXNativeTarget "igMadWorkout WatchKit App" */;
+			buildPhases = (
+				B296F87D1F1D0407005411AD /* Resources */,
+				B296F89F1F1D0407005411AD /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B296F8911F1D0407005411AD /* PBXTargetDependency */,
+			);
+			name = "igMadWorkout WatchKit App";
+			productName = "igMadWorkout WatchKit App";
+			productReference = B296F87F1F1D0407005411AD /* igMadWorkout WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		B296F88D1F1D0407005411AD /* igMadWorkout WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B296F89C1F1D0407005411AD /* Build configuration list for PBXNativeTarget "igMadWorkout WatchKit Extension" */;
+			buildPhases = (
+				B296F88A1F1D0407005411AD /* Sources */,
+				B296F88B1F1D0407005411AD /* Frameworks */,
+				B296F88C1F1D0407005411AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "igMadWorkout WatchKit Extension";
+			productName = "igMadWorkout WatchKit Extension";
+			productReference = B296F88E1F1D0407005411AD /* igMadWorkout WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B296F8651F1D0407005411AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Moncef Hireche";
+				TargetAttributes = {
+					B296F86C1F1D0407005411AD = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					B296F87E1F1D0407005411AD = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					B296F88D1F1D0407005411AD = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B296F8681F1D0407005411AD /* Build configuration list for PBXProject "igMadWorkout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B296F8641F1D0407005411AD;
+			productRefGroup = B296F86E1F1D0407005411AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B296F86C1F1D0407005411AD /* igMadWorkout */,
+				B296F87E1F1D0407005411AD /* igMadWorkout WatchKit App */,
+				B296F88D1F1D0407005411AD /* igMadWorkout WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B296F86B1F1D0407005411AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B296F87B1F1D0407005411AD /* LaunchScreen.storyboard in Resources */,
+				B296F8781F1D0407005411AD /* Assets.xcassets in Resources */,
+				B296F8761F1D0407005411AD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B296F87D1F1D0407005411AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B296F8881F1D0407005411AD /* Assets.xcassets in Resources */,
+				B296F8861F1D0407005411AD /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B296F88C1F1D0407005411AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B296F8981F1D0407005411AD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B296F8691F1D0407005411AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B296F8731F1D0407005411AD /* ViewController.swift in Sources */,
+				B296F8711F1D0407005411AD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B296F88A1F1D0407005411AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B296F8961F1D0407005411AD /* ExtensionDelegate.swift in Sources */,
+				B296F8941F1D0407005411AD /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B296F8821F1D0407005411AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B296F87E1F1D0407005411AD /* igMadWorkout WatchKit App */;
+			targetProxy = B296F8811F1D0407005411AD /* PBXContainerItemProxy */;
+		};
+		B296F8911F1D0407005411AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B296F88D1F1D0407005411AD /* igMadWorkout WatchKit Extension */;
+			targetProxy = B296F8901F1D0407005411AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B296F8741F1D0407005411AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B296F8751F1D0407005411AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B296F8791F1D0407005411AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B296F87A1F1D0407005411AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B296F8841F1D0407005411AD /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B296F8851F1D0407005411AD /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B296F89A1F1D0407005411AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B296F89B1F1D0407005411AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B296F89D1F1D0407005411AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "igMadWorkout WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moncefhireche.igMadWorkout.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		B296F89E1F1D0407005411AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "igMadWorkout WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moncefhireche.igMadWorkout.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		B296F8A11F1D0407005411AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = igMadWorkout_WatchKit_Extension;
+				INFOPLIST_FILE = "igMadWorkout WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moncefhireche.igMadWorkout.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		B296F8A21F1D0407005411AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = igMadWorkout_WatchKit_Extension;
+				INFOPLIST_FILE = "igMadWorkout WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moncefhireche.igMadWorkout.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		B296F8A51F1D0407005411AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = igMadWorkout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moncefhireche.igMadWorkout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B296F8A61F1D0407005411AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = igMadWorkout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moncefhireche.igMadWorkout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B296F8681F1D0407005411AD /* Build configuration list for PBXProject "igMadWorkout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B296F89A1F1D0407005411AD /* Debug */,
+				B296F89B1F1D0407005411AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B296F89C1F1D0407005411AD /* Build configuration list for PBXNativeTarget "igMadWorkout WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B296F89D1F1D0407005411AD /* Debug */,
+				B296F89E1F1D0407005411AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B296F8A01F1D0407005411AD /* Build configuration list for PBXNativeTarget "igMadWorkout WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B296F8A11F1D0407005411AD /* Debug */,
+				B296F8A21F1D0407005411AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B296F8A41F1D0407005411AD /* Build configuration list for PBXNativeTarget "igMadWorkout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B296F8A51F1D0407005411AD /* Debug */,
+				B296F8A61F1D0407005411AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B296F8651F1D0407005411AD /* Project object */;
+}
