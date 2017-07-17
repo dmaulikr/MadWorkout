@@ -20,6 +20,8 @@
 		B296F8961F1D0407005411AD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B296F8951F1D0407005411AD /* ExtensionDelegate.swift */; };
 		B296F8981F1D0407005411AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B296F8971F1D0407005411AD /* Assets.xcassets */; };
 		B296F8A91F1D08AD005411AD /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B296F8A81F1D08AD005411AD /* logo.png */; };
+		B296F8AC1F1D0C30005411AD /* icon_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = B296F8AA1F1D0C30005411AD /* icon_watch.png */; };
+		B296F8AD1F1D0C30005411AD /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B296F8AB1F1D0C30005411AD /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		B296F8971F1D0407005411AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B296F8991F1D0407005411AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B296F8A81F1D08AD005411AD /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Images/logo.png; sourceTree = "<group>"; };
+		B296F8AA1F1D0C30005411AD /* icon_watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_watch.png; path = Images/icon_watch.png; sourceTree = "<group>"; };
+		B296F8AB1F1D0C30005411AD /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Images/icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 		B296F8A71F1D087F005411AD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B296F8AA1F1D0C30005411AD /* icon_watch.png */,
+				B296F8AB1F1D0C30005411AD /* icon.png */,
 				B296F8A81F1D08AD005411AD /* logo.png */,
 			);
 			name = Images;
@@ -238,10 +244,12 @@
 					};
 					B296F87E1F1D0407005411AD = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TS8A93WVX9;
 						ProvisioningStyle = Automatic;
 					};
 					B296F88D1F1D0407005411AD = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TS8A93WVX9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -273,6 +281,8 @@
 			files = (
 				B296F8A91F1D08AD005411AD /* logo.png in Resources */,
 				B296F87B1F1D0407005411AD /* LaunchScreen.storyboard in Resources */,
+				B296F8AD1F1D0C30005411AD /* icon.png in Resources */,
+				B296F8AC1F1D0C30005411AD /* icon_watch.png in Resources */,
 				B296F8781F1D0407005411AD /* Assets.xcassets in Resources */,
 				B296F8761F1D0407005411AD /* Main.storyboard in Resources */,
 			);
@@ -458,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = TS8A93WVX9;
 				INFOPLIST_FILE = "igMadWorkout WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moncefhireche.igMadWorkout.watchkitapp.watchkitextension;
@@ -474,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = TS8A93WVX9;
 				INFOPLIST_FILE = "igMadWorkout WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moncefhireche.igMadWorkout.watchkitapp.watchkitextension;
@@ -491,6 +503,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TS8A93WVX9;
 				IBSC_MODULE = igMadWorkout_WatchKit_Extension;
 				INFOPLIST_FILE = "igMadWorkout WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moncefhireche.igMadWorkout.watchkitapp;
@@ -508,6 +521,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TS8A93WVX9;
 				IBSC_MODULE = igMadWorkout_WatchKit_Extension;
 				INFOPLIST_FILE = "igMadWorkout WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moncefhireche.igMadWorkout.watchkitapp;
