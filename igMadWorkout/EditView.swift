@@ -21,26 +21,23 @@ class EditView: UIViewController
         super.didReceiveMemoryWarning()
     }
     // ============================
-    @IBAction func addExerciseButton(_ sender: UIButton)
-    {
-        if self.addExerciseField.text != ""
-        {
+    @IBAction func addExerciseButton(_ sender: UIButton) {
+        if self.addExerciseField.text != "" {
             self.exerciseAccountability[self.addExerciseField.text!] = 0
             self.exerciseAccount.setValue(self.exerciseAccountability, forKey: "exercises")
             self.addExerciseField.text = ""
             self.theTableView.reloadData()
             self.mAlterts("Exercise Added!")
         }
+        self.view.endEditing(true)
     }
     // ============================
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.theTableView.backgroundColor = UIColor.clear
         return self.exerciseAccountability.count
     }
     //-------------
-    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell
-    {
+    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         let intIndex = indexPath.row
         let index = self.exerciseAccountability.index(self.exerciseAccountability.startIndex, offsetBy: intIndex)
         
@@ -54,8 +51,7 @@ class EditView: UIViewController
         return cell
     }
     //-------------
-    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath)
-    {
+    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
             let intIndex = indexPath.row

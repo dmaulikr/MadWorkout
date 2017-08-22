@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  igMadWorkout
-//
-//  Created by Moncef Hireche on 17-07-17.
-//  Copyright © 2017 Moncef Hireche. All rights reserved.
-//
+
 // ============================
 import UIKit
 import WatchConnectivity
@@ -24,6 +18,7 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     var theDatabase: [String : [[String : String]]]!
     var theExercise: String!
+    var countClipboard: Int = 0
     // ============================
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,11 +64,18 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     // ============================
     @IBAction func saveToClipboard(_ sender: UIButton) {
-        let unSortedEcerciseKeys = Array(self.exerciseAccountability.keys)
-        UIPasteboard.general.string = unSortedEcerciseKeys.joined(separator: ",")
+        countClipboard += 1
+        
+        if countClipboard == 3 {
+            let unSortedEcerciseKeys = Array(self.exerciseAccountability.keys)
+            UIPasteboard.general.string = unSortedEcerciseKeys.joined(separator: ",")
+            mAlterts("Saved to clipboard..")
+        }
     }
     // ============================
     @IBAction func sendToWatch(_ sender: AnyObject) {
+        countClipboard = 0 // Reinitialisation du compteur pour le clipboard
+        
         var dictToSendToWatch: [String : String ] = [:]
         
         for aWorkout in Shared.sharedInstance.theDatabase{
@@ -90,9 +92,6 @@ class ViewController: UIViewController, WCSessionDelegate {
             dictToSendToWatch[aDate] = str
         }
         sendMessage(aDict: dictToSendToWatch)
-        
-        
-        
         
 //        let databaseToSendToWatch = Shared.sharedInstance.getDatabase("db")
 //        session.sendMessage(databaseToSendToWatch, replyHandler:
@@ -122,6 +121,8 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     // ============================
     @IBAction func doneButton(_ sender: UIButton) {
+        countClipboard = 0 // Reinitialisation du compteur pour le clipboard
+        
         self.thePickerView.selectRow(0, inComponent: 0, animated: true)
         
         let todaysDate:Date = Date()
@@ -209,10 +210,14 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     // ============================
     @IBAction func addSetButton(_ sender: UIButton) {
+        countClipboard = 0 // Reinitialisation du compteur pour le clipboard
+        
         self.addExercise()
     }
     // ============================
     @IBAction func hideKeyboard(_ sender: UIButton) {
+        countClipboard = 0 // Reinitialisation du compteur pour le clipboard
+
         self.view.endEditing(true)
     }
     // ============================
@@ -284,15 +289,16 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     // ============================
 }
-
+// ============================
 extension Date {
     init(dateString: String) {
         let dateStringFormatter = DateFormatter()
         dateStringFormatter.dateFormat = "yyyy-MM-dd"
         dateStringFormatter.locale = Locale(identifier: "en_US_POSIX")
         let d = dateStringFormatter.date(from: dateString)!
-        self.init(timeInterval:0, since:d)
+        self.init(timeInterval: 0, since: d)
     }
 }
+// ============================
 
 

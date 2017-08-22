@@ -1,14 +1,12 @@
 // ============================
 import UIKit
 // ============================
-class TableViewController: UITableViewController
-{
+class TableViewController: UITableViewController {
     /* -------------------------------- */
     var theDatabase: [String : [[String : String]]]!
     var theWorkout: [String]!
      /* -------------------------------- */
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         self.clearsSelectionOnViewWillAppear = false
         self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -17,12 +15,10 @@ class TableViewController: UITableViewController
         self.theWorkout = self.fillUpWorkoutArray(self.getDates()[Shared.sharedInstance.theRow])
     }
      /* -------------------------------- */
-    func getDates() -> [String]
-    {
+    func getDates() -> [String] {
         var tempArray = [""]
         
-        for (a, _) in  self.theDatabase
-        {
+        for (a, _) in  self.theDatabase {
             tempArray.append(a)
         }
         
@@ -31,18 +27,13 @@ class TableViewController: UITableViewController
         return tempArray
     }
      /* -------------------------------- */
-    func fillUpWorkoutArray(_ theDate: String) -> [String]
-    {
+    func fillUpWorkoutArray(_ theDate: String) -> [String] {
         var arrToReturn: [String] = []
         
-        for (a, b) in self.theDatabase
-        {
-            if a == theDate
-            {
-                for c in b
-                {
-                    for (d, e) in c
-                    {
+        for (a, b) in self.theDatabase {
+            if a == theDate {
+                for c in b {
+                    for (d, e) in c {
                         arrToReturn.append("[\(e)] : \(d)")
                     }
                 }
@@ -52,23 +43,19 @@ class TableViewController: UITableViewController
         return arrToReturn
     }
     /* -------------------------------- */
-    override func didReceiveMemoryWarning()
-    {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     /* -------------------------------- */
-    override func numberOfSections(in tableView: UITableView) -> Int
-    {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
      /* -------------------------------- */
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.theWorkout.count
     }
      /* -------------------------------- */
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"cell")
         cell.textLabel!.font = UIFont(name: "Caviar Dreams", size: 18.0)
         cell.textLabel!.text = self.theWorkout[indexPath.row]
@@ -80,15 +67,12 @@ class TableViewController: UITableViewController
         return cell
     }
     /* -------------------------------- */
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
-    {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
      /* -------------------------------- */
-
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete
-        {
+        if editingStyle == .delete {
             self.theWorkout.remove(at: indexPath.row)
             self.deleteFromDatabase(self.getDates()[Shared.sharedInstance.theRow], indexToDelete: indexPath.row)
             
@@ -98,24 +82,17 @@ class TableViewController: UITableViewController
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-
-
-
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath)
-    {
+    /* -------------------------------- */
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath) {
 //        let itemToMove = self.theWorkout[fromIndexPath.row]
 //        self.theWorkout.removeAtIndex(fromIndexPath.row)
 //        self.theWorkout.insert(itemToMove, atIndex: toIndexPath.row)
     }
 
-    func deleteFromDatabase(_ theDate: String, indexToDelete: Int)
-    {
-        for (a, b) in self.theDatabase
-        {
-            if a == theDate
-            {
-                for _ in b
-                {
+    func deleteFromDatabase(_ theDate: String, indexToDelete: Int) {
+        for (a, b) in self.theDatabase {
+            if a == theDate {
+                for _ in b {
                     self.theDatabase[theDate]?.remove(at: indexToDelete)
                     Shared.sharedInstance.saveDatabase(self.theDatabase)
                     return
@@ -123,14 +100,11 @@ class TableViewController: UITableViewController
             }
         }
     }
-
-
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
-    {
+    /* -------------------------------- */
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-
     /*
     // MARK: - Navigation
 
@@ -142,7 +116,7 @@ class TableViewController: UITableViewController
     */
     // ============================
 }
-
+/* -------------------------------- */
 extension UIColor {
     static func colorWithRedValue(redValue: CGFloat, greenValue: CGFloat, blueValue: CGFloat, alpha: CGFloat) -> UIColor {
         return UIColor(red: redValue/255.0, green: greenValue/255.0, blue: blueValue/255.0, alpha: alpha)
