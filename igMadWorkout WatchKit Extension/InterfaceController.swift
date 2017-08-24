@@ -11,9 +11,9 @@ import Foundation
 import WatchConnectivity
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
-    //--------------------
+    // ========================================================================= Outlets
     @IBOutlet var table: WKInterfaceTable!
-    //--------------------
+    // ========================================================================= Attributs
     var data: [String : String] = [:]
     var dates: [String] = []
     var workouts: [String] = []

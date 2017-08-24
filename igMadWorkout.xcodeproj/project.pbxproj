@@ -209,12 +209,12 @@
 				B296F8A71F1D087F005411AD /* Images */,
 				B296F8AE1F1D0F97005411AD /* Assets */,
 				B296F8721F1D0407005411AD /* ViewController.swift */,
-				B2B1FAEE1F3CBD8500E0D122 /* TableViewController.swift */,
 				B2B1FAEB1F3CBD8500E0D122 /* EditView.swift */,
 				B2B1FAEC1F3CBD8500E0D122 /* InfoView.swift */,
 				B2B1FAEF1F3CBD8500E0D122 /* WorkoutsView.swift */,
 				B2B1FAED1F3CBD8500E0D122 /* Shared.swift */,
 				B296F8741F1D0407005411AD /* Main.storyboard */,
+				B2B1FAEE1F3CBD8500E0D122 /* TableViewController.swift */,
 			);
 			path = igMadWorkout;
 			sourceTree = "<group>";

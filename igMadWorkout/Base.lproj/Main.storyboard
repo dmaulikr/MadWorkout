@@ -496,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpu-Oa-zY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2107" y="290"/>
+            <point key="canvasLocation" x="1780" y="290"/>
         </scene>
         <!--Edit View-->
         <scene sceneID="GZG-pZ-W3g">
@@ -611,14 +611,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZ1-ta-Tl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="962"/>
+            <point key="canvasLocation" x="2506" y="290"/>
         </scene>
     </scenes>
     <resources>
         <image name="logo.png" width="240" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aSa-9h-yfw"/>
-        <segue reference="WG9-OT-pUx"/>
+        <segue reference="zgh-1j-gTh"/>
+        <segue reference="GqE-UC-c6f"/>
     </inferredMetricsTieBreakers>
 </document>

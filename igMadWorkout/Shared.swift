@@ -1,58 +1,49 @@
 // ============================
 import UIKit
 // ============================
-class Shared: UIViewController
-{
-    // ============================
+class Shared: UIViewController {
+    // ========================================================================= Attributs
     var theDatabase: [String : [[String : String]]]!
     var savedUserDefault: UserDefaults = UserDefaults.standard
     static let sharedInstance = Shared()
     var theRow: Int!
-    // ============================
-    func checkForUserDefaultByName(_ theName: String, andUserDefaultObject: UserDefaults) -> Bool
-    {
+    //========================================================================== Fonctions
+    // Verifie si un UserDefault par son nom envoye en parametre
+    func checkForUserDefaultByName(_ theName: String, andUserDefaultObject: UserDefaults) -> Bool {
         let userDefaultObject = andUserDefaultObject.object(forKey: theName)
         
-        if userDefaultObject == nil
-        {
+        if userDefaultObject == nil {
             return false
         }
         
         return true
     }
-    // ============================
-    func  saveOrLoadUserDefaults(_ name: String)
-    {
+    // Sauvegarde ou telecharge un dictionnaire a partir d'un UserDefault
+    func  saveOrLoadUserDefaults(_ name: String) {
        //self.savedUserDefault.removeObjectForKey(name)
         
-        if !self.checkForUserDefaultByName(name, andUserDefaultObject: self.savedUserDefault)
-        {
+        if !self.checkForUserDefaultByName(name, andUserDefaultObject: self.savedUserDefault) {
             var tempArray = ["" : [["" : ""]]]
             tempArray[""] = nil
             
             self.saveUserDefaultByName(name, andUserDefaultObject: self.savedUserDefault, andSomeValue: tempArray)
         }
-        else
-        {
+        else {
            self.theDatabase = self.savedUserDefault.value(forKey: name) as! [String : [[String : String]]]
         }
     }
-    // ============================
-    func saveUserDefaultByName(_ theName: String, andUserDefaultObject: UserDefaults, andSomeValue: [String : [[String : String]]])
-    {
+    // ----------------------------
+    func saveUserDefaultByName(_ theName: String, andUserDefaultObject: UserDefaults, andSomeValue: [String : [[String : String]]]) {
         andUserDefaultObject.setValue(andSomeValue, forKey: theName)
     }
-    // ============================
-    func getDatabase(_ name: String) -> [String : [[String : String]]]
-    {
+    // ----------------------------
+    func getDatabase(_ name: String) -> [String : [[String : String]]] {
         return self.savedUserDefault.value(forKey: name) as! [String : [[String : String]]]
     }
-    // ============================
-    func saveDatabase(_ valueToSave: [String : [[String : String]]])
-    {
+    // ----------------------------
+    func saveDatabase(_ valueToSave: [String : [[String : String]]]) {
         self.savedUserDefault.setValue(valueToSave, forKey: "db")
     }
-    // ============================
 }
 
 

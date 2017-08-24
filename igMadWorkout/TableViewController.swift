@@ -14,6 +14,11 @@ class TableViewController: UITableViewController {
         self.theDatabase = Shared.sharedInstance.getDatabase("db")
         self.theWorkout = self.fillUpWorkoutArray(self.getDates()[Shared.sharedInstance.theRow])
     }
+    //
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
      /* -------------------------------- */
     func getDates() -> [String] {
         var tempArray = [""]
@@ -42,53 +47,7 @@ class TableViewController: UITableViewController {
         
         return arrToReturn
     }
-    /* -------------------------------- */
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    /* -------------------------------- */
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-     /* -------------------------------- */
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.theWorkout.count
-    }
-     /* -------------------------------- */
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"cell")
-        cell.textLabel!.font = UIFont(name: "Caviar Dreams", size: 18.0)
-        cell.textLabel!.text = self.theWorkout[indexPath.row]
-        tableView.backgroundColor = UIColor.colorWithRedValue(redValue: 63, greenValue: 92, blueValue: 255, alpha: 1)
-        //tableView.backgroundColor = UIColor(red: 63.0, green: 92.0, blue: 255.0, alpha: 1.0)
-        cell.textLabel?.textColor = UIColor(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0)
-        cell.backgroundColor = UIColor.clear
-
-        return cell
-    }
-    /* -------------------------------- */
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-     /* -------------------------------- */
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            self.theWorkout.remove(at: indexPath.row)
-            self.deleteFromDatabase(self.getDates()[Shared.sharedInstance.theRow], indexToDelete: indexPath.row)
-            
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-        else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    /* -------------------------------- */
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath) {
-//        let itemToMove = self.theWorkout[fromIndexPath.row]
-//        self.theWorkout.removeAtIndex(fromIndexPath.row)
-//        self.theWorkout.insert(itemToMove, atIndex: toIndexPath.row)
-    }
-
+    //
     func deleteFromDatabase(_ theDate: String, indexToDelete: Int) {
         for (a, b) in self.theDatabase {
             if a == theDate {
@@ -100,11 +59,61 @@ class TableViewController: UITableViewController {
             }
         }
     }
-    /* -------------------------------- */
+    // ========================================================================= TableView
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    //
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.theWorkout.count
+    }
+    //
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"cell")
+        cell.textLabel!.font = UIFont(name: "Caviar Dreams", size: 18.0)
+//        cell.textLabel!.text = self.theWorkout[indexPath.row]
+        cell.textLabel!.text = "hum..."
+        tableView.backgroundColor = UIColor.colorWithRedValue(redValue: 63, greenValue: 92, blueValue: 255, alpha: 1)
+        //tableView.backgroundColor = UIColor(red: 63.0, green: 92.0, blue: 255.0, alpha: 1.0)
+        cell.textLabel?.textColor = UIColor(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0)
+        cell.backgroundColor = UIColor.clear
+
+        return cell
+    }
+    //
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    //
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.theWorkout.remove(at: indexPath.row)
+            self.deleteFromDatabase(self.getDates()[Shared.sharedInstance.theRow], indexToDelete: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
+    }
+    //
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath) {
+//        let itemToMove = self.theWorkout[fromIndexPath.row]
+//        self.theWorkout.removeAtIndex(fromIndexPath.row)
+//        self.theWorkout.insert(itemToMove, atIndex: toIndexPath.row)
+    }
+
+    // Aactiver la fonctionnalite de reorganisation des rangees
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
+    // =========================================================================
+    
+
+    
+    
+    
     /*
     // MARK: - Navigation
 
