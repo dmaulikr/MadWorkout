@@ -70,6 +70,10 @@ class ViewController: UIViewController, WCSessionDelegate {
             let unSortedEcerciseKeys = Array(self.exerciseAccountability.keys)
             UIPasteboard.general.string = unSortedEcerciseKeys.joined(separator: ",")
             mAlterts("Saved to clipboard..")
+            
+            for (k, _) in self.exerciseAccountability {
+                self.exerciseAccountability[k] = 0
+            }
         }
     }
     // Envoie les information a la Watch
@@ -92,7 +96,7 @@ class ViewController: UIViewController, WCSessionDelegate {
             dictToSendToWatch[aDate] = str
         }
         sendMessage(aDict: dictToSendToWatch)
-        
+        mAlterts("Send to Watch...")
 //        let databaseToSendToWatch = Shared.sharedInstance.getDatabase("db")
 //        session.sendMessage(databaseToSendToWatch, replyHandler:
 //            { replyMessage in },
@@ -154,15 +158,15 @@ class ViewController: UIViewController, WCSessionDelegate {
         
         if self.theDatabase[theDate] == nil
         {
-            self.theDatabase[theDate] = [[theExercise! : setsAndReps]] // Ajout de !
+            self.theDatabase[theDate] = [[theExercise! : setsAndReps]]
         }
         else
         {
-            self.theDatabase[theDate]!.append([theExercise! : setsAndReps]) // Ajout de !
+            self.theDatabase[theDate]!.append([theExercise! : setsAndReps])
         }
         
         Shared.sharedInstance.saveDatabase(self.theDatabase)
-        self.accountForExercise(theExercise!) // Ajout de !
+        self.accountForExercise(theExercise!)
         self.mAlterts(self.displayWorkout(theDate))
     }
     // ----------------------------
@@ -277,7 +281,6 @@ class ViewController: UIViewController, WCSessionDelegate {
                 }
             }
         }
-        
         return strForDisplay
     }
     // ----------------------------
